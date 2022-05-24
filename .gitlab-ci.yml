@@ -7,7 +7,7 @@ build_container:
     TAG_COMMIT: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_NAME:$CI_COMMIT_SHORT_SHA
   stage: build
   tags:
-    - linux
+    - shell
   script:
     - cd container
     - docker build -t $TAG_COMMIT -t $TAG_LATEST .
